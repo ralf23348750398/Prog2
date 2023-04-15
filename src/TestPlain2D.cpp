@@ -113,7 +113,7 @@ int main() {
     cout << "Select the exercise you would like to execute." << endl << "Select" << endl << "0 for the test," << endl << "1 for sheet 1, exercise 2," << endl
         << "2 for sheet 1, exercise 3," << endl << "3 for sheet 2, exercise 1a," << endl << "4 for sheet 2, exercise 1b," << endl << "5 for sheet 2, exercise 1c," << endl
         << "6 for sheet 2, exercise 2," << endl << "7 for sheet 2, exercise 3," << endl << "8 for sheet 3, exercise 1b," << endl << "9 for sheet 3, exercise 1c," 
-        << endl << "10 for sheet 3, exercise 2," << endl << "11 for sheet 3, exercise 3," << endl << "q to quit:" << endl;
+        << endl << "10 for sheet 3, exercise 2," << endl << "11 for sheet 3, exercise 3," << endl << "12 for sheet 4, exercise 1," << endl << "q to quit:" << endl;
     cin >> selector;
 
     //object creation
@@ -136,6 +136,7 @@ int main() {
     PulsatingAnimation pa1(500, 500, 10, 300);
     BinaryVisuals b1;
     Color c1(255, 200, 150);
+    Color c2;
 
     switch (selector) {
     case 0:
@@ -175,7 +176,16 @@ int main() {
         e3_3_reverse(vp1, b1, 2383392409);
         break;
     case 12:
-        cout << c1.getGreen() << endl;
+        int r, g, b;
+        cout << "Enter a value for the red spectrum: ";
+        cin >> r;
+        c1.setRed(r);
+        cout << "red: " << c1.getRed() << " green: " << c1.getGreen() << " blue: " << c1.getBlue() << endl;
+        c2 = c1.darken(50);
+        cout << "red: " << c2.getRed() << " green: " << c2.getGreen() << " blue: " << c2.getBlue() << endl;
+        c2 = c2.lighten(100);
+        cout << "red: " << c2.getRed() << " green: " << c2.getGreen() << " blue: " << c2.getBlue() << endl;
+
         break;
     default:
         break;

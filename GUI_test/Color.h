@@ -15,6 +15,9 @@ public:
 	void setRed(int r);
 	void setGreen(int g);
 	void setBlue(int b);
+
+	Color darken(int amount);
+	Color lighten(int amount);
 private:
 	int red, green, blue;
 };
