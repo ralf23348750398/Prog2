@@ -159,6 +159,7 @@
     <ClInclude Include="Disk.h" />
     <ClInclude Include="EquilateralTriangle.h" />
     <ClInclude Include="FirstSquares.h" />
+    <ClInclude Include="GridViewer.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SierpinskiTriangle.h" />
     <ClInclude Include="Square.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="Disk.cpp" />
     <ClCompile Include="EquilateralTriangle.cpp" />
     <ClCompile Include="FirstSquares.cpp" />
+    <ClCompile Include="GridViewer.cpp" />
     <ClCompile Include="PulsatingAnimation.cpp" />
     <ClCompile Include="SierpinskiTriangle.cpp" />
     <ClCompile Include="Square.cpp" />
