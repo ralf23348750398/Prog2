@@ -100,7 +100,7 @@
     <ClCompile Include="..\src\ShaderInterface.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\TestPlain2D.cpp">
+    <ClCompile Include="TestPlain2D.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
   </ItemGroup>

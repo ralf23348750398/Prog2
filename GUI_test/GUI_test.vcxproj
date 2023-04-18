@@ -170,7 +170,6 @@
     <ClCompile Include="..\src\ShaderInterface.cpp" />
     <ClCompile Include="..\src\Shape.cpp" />
     <ClCompile Include="..\src\StringHelper.cpp" />
-    <ClCompile Include="..\src\TestPlain2D.cpp" />
     <ClCompile Include="..\src\ViewPortGL.cpp" />
     <ClCompile Include="..\src\WindowInterface.cpp" />
     <ClCompile Include="BinaryVisuals.cpp" />
@@ -180,6 +179,7 @@
     <ClCompile Include="PulsatingAnimation.cpp" />
     <ClCompile Include="SierpinskiTriangle.cpp" />
     <ClCompile Include="Square.cpp" />
+    <ClCompile Include="TestPlain2D.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,13 +1,13 @@
 #include <iostream>
 
-#include "ViewPortGL.h"
+#include "..\src\ViewPortGL.h"
+#include "..\src\PulsatingAnimation.h"
 #include "..\GUI_test\FirstSquares.h"
 #include "..\GUI_test\Square.h"
 #include "..\GUI_test\Disk.h"
 #include "..\GUI_test\EquilateralTriangle.h"
 #include "..\GUI_test\SierpinskiTriangle.h"
 #include "..\GUI_test\BinaryVisuals.h"
-#include "..\src\PulsatingAnimation.h"
 
 using namespace std;
 
