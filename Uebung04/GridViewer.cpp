@@ -31,18 +31,18 @@ GridViewer::GridViewer(string titleP, int size, int cellSizeP)
 	}
 
 	//allocating memory & initializing the content array 
-	content = new unsigned int[gridSize ^ 2];
-	for (int i = 0; i < (gridSize ^ 2); i++) {
+	content = new unsigned int[gridSize * gridSize];
+	for (int i = 0; i < (gridSize * gridSize); i++) {
 		content[i] = 0;
 	}
 }
 
 GridViewer::~GridViewer() {
-	delete content;
+	delete[] content;
 }
 
 Color GridViewer::colorFor(unsigned int value) {
-	int r, g, b;
+	/*int r, g, b;
 	unsigned int mask_r, mask_g, mask_b;
 
 	for (int i = 0; i < sizeof(unsigned int) * 8; i++) {
@@ -57,15 +57,18 @@ Color GridViewer::colorFor(unsigned int value) {
 		}
 	}
 
-	r = value & mask_r >> 23;
-	g = value & mask_g >> 15;
-	b = value & mask_b >> 7;
+	r = value & mask_r >> 24;
+	g = value & mask_g >> 16;
+	b = value & mask_b >> 8;
 	
-	return Color(r, g, b);
+	return Color(r, g, b);*/
+
+	return Color((value & 0xFF000000) >> 24, (value & 0xFF0000) >> 16, (value & 0xFF00) >> 8);
 }
 
 void GridViewer::prepareCell(int x, int y) {
-    // Bitte implementieren!
+	Color color = colorFor(content[x + y * gridSize]);
+	prepareBlock(x * cellSize - 1, y * cellSize, cellSize + 1, cellSize + 1, color.getRed(), color.getGreen(), color.getBlue());
 }
 
 void GridViewer::prepareCellBorder(int x, int y) {
@@ -73,10 +76,10 @@ void GridViewer::prepareCellBorder(int x, int y) {
 }
 
 void GridViewer::testCoordinates(int x, int y) {
-	if (x<0 || x>cellSize) {
+	if (x<0 || x>gridSize) {
 		throw logic_error("The x parameter (" + to_string(x) + ") is out of scope of the cellSize (" + to_string(cellSize) + ").");
 	}
-	if (y<0 || y>cellSize) {
+	if (y<0 || y>gridSize) {
 		throw logic_error("The y parameter (" + to_string(y) + ") is out of scope of the cellSize (" + to_string(cellSize) + ").");
 	}
 }
@@ -92,9 +95,9 @@ void GridViewer::setCell(int x, int y, unsigned int value) {
 }
 
 void GridViewer::draw() {
-	/*int count = 0;
-	static const int maxPreparedTriangles = getMaxNumberOfPreparedTriangles();
-	static const int maxPreparedLines = getMaxNumberOfPreparedLines();
+	int count = 0;
+	static const int maxPreparedTriangles = ViewPortGL::getMaxNumberOfPreparedTriangles();
+	static const int maxPreparedLines = ViewPortGL::getMaxNumberOfPreparedLines();
 	for (int x = 0; x < gridSize; x++) {
 		for (int y = 0; y < gridSize; y++) {
 			prepareCell(x, y);
@@ -112,7 +115,7 @@ void GridViewer::draw() {
 		sendTriangles();
 		sendLines();
 		sendPixels();
-	}*/
+	}
 }
 
 int GridViewer::getGridSize() {

@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{13ed66db-b16c-4509-8102-7af9c5f11b63}</ProjectGuid>
+    <ProjectGuid>{72A9941B-F26F-4F4E-8E09-49DCA5616505}</ProjectGuid>
     <RootNamespace>GUItest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -148,38 +148,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\PulsatingAnimation.h" />
     <ClInclude Include="..\src\ShaderInterface.h" />
-    <ClInclude Include="..\src\Shape.h" />
     <ClInclude Include="..\src\StringHelper.h" />
     <ClInclude Include="..\src\ViewPortGL.h" />
     <ClInclude Include="..\src\WindowInterface.h" />
-    <ClInclude Include="BinaryVisuals.h" />
-    <ClInclude Include="Disk.h" />
-    <ClInclude Include="EquilateralTriangle.h" />
-    <ClInclude Include="FirstSquares.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="GridViewer.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="SierpinskiTriangle.h" />
-    <ClInclude Include="Square.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="GUI_test.rc" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\glad.c" />
     <ClCompile Include="..\src\ShaderInterface.cpp" />
-    <ClCompile Include="..\src\Shape.cpp" />
     <ClCompile Include="..\src\StringHelper.cpp" />
-    <ClCompile Include="..\src\TestPlain2D.cpp" />
     <ClCompile Include="..\src\ViewPortGL.cpp" />
     <ClCompile Include="..\src\WindowInterface.cpp" />
-    <ClCompile Include="BinaryVisuals.cpp" />
-    <ClCompile Include="Disk.cpp" />
-    <ClCompile Include="EquilateralTriangle.cpp" />
-    <ClCompile Include="FirstSquares.cpp" />
-    <ClCompile Include="PulsatingAnimation.cpp" />
-    <ClCompile Include="SierpinskiTriangle.cpp" />
-    <ClCompile Include="Square.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="GridViewer.cpp" />
+    <ClCompile Include="Ue4Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

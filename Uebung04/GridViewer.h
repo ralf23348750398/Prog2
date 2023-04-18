@@ -1,5 +1,5 @@
 #pragma once
-#include "ViewPortGL.h"
+#include "..\src\ViewPortGL.h"
 #include "Color.h"
 
 class GridViewer : public ViewPortGL {

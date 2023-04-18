@@ -24,28 +24,7 @@
     <ClInclude Include="..\src\WindowInterface.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\PulsatingAnimation.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Shape.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Square.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="FirstSquares.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Disk.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="EquilateralTriangle.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SierpinskiTriangle.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="BinaryVisuals.h">
+    <ClInclude Include="Color.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ShaderInterface.h">
@@ -54,11 +33,9 @@
     <ClInclude Include="..\src\ViewPortGL.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="GUI_test.rc">
-      <Filter>Ressourcendateien</Filter>
-    </ResourceCompile>
+    <ClInclude Include="GridViewer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\glad.c">
@@ -73,34 +50,16 @@
     <ClCompile Include="..\src\WindowInterface.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Shape.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="FirstSquares.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Disk.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="EquilateralTriangle.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="PulsatingAnimation.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SierpinskiTriangle.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="BinaryVisuals.cpp">
+    <ClCompile Include="Color.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ShaderInterface.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\TestPlain2D.cpp">
+    <ClCompile Include="GridViewer.cpp">
+      <Filter>Ressourcendateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ue4Main.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
   </ItemGroup>
