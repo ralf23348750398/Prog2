@@ -86,7 +86,6 @@ void diagonalTest() {
         }
     } catch (exception exc) {
         cout << exc.what() << endl;
-        getchar();
     }
 }
 
@@ -98,7 +97,6 @@ int main() {
         //paletteGridViewerTest();
     } catch (...) {
         cout << "Unknown error" << endl;
-        getchar();
     }
 	return 0;
 }
