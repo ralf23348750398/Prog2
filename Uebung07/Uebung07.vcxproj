@@ -129,9 +129,17 @@
   <ItemGroup>
     <ClInclude Include="BinaryRelation.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="ColorRelationBrightness.h" />
+    <ClInclude Include="ColorRelationColor.h" />
+    <ClInclude Include="InOrderIntRelation.h" />
+    <ClInclude Include="ReverseOrderIntRelation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="ColorRelationBrightness.cpp" />
+    <ClCompile Include="ColorRelationColor.cpp" />
+    <ClCompile Include="InOrderIntRelation.cpp" />
+    <ClCompile Include="ReverseOrderIntRelation.cpp" />
     <ClCompile Include="SortingAlgorithms.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
