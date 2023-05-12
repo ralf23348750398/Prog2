@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClInclude Include="BinaryRelation.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="InOrderIntRelation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="InOrderIntRelation.cpp" />
     <ClCompile Include="SortingAlgorithms.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -24,11 +24,11 @@ void printArray(T* a, int size) {
 }
 
 
-
-void insertionSort(unsigned int* a, int size) {
+template <class T> 
+void insertionSort(T* a, int size, BinaryRelation<T,T>& brel) {
 	for (int i = 1; i < size; i++) {
 		int j = i;
-		while (j > 0 && a[j - 1] > a[j]) {
+		while (j > 0 && brel.inRelation(a[j - 1], a[j])) {
 			swap(a[j], a[j-1]);
 			j--;
 		}
@@ -37,12 +37,12 @@ void insertionSort(unsigned int* a, int size) {
 
 
 
-
-void quickSort(unsigned int* a, int left, int right) {
+template <class T>
+void quickSort(T* a, int left, int right, BinaryRelation<T,T>& brel) {
 	int i = left;
 	int j = right;
 	while (j > i) {
-		if (a[i] < a[i+1]) {
+		if (brel.inRelation(a[i] < a[i+1])) {
 			swap(a[i + 1], a[j]);
 			j--;
 		} else {
@@ -50,12 +50,13 @@ void quickSort(unsigned int* a, int left, int right) {
 			i++;
 		}
 	}
-	if (left < i - 1) quickSort(a, left, i - 1);
-	if (right > i + 1) quickSort(a, i + 1, right);
+	if (left < i - 1) quickSort(a, left, i - 1, brel);
+	if (right > i + 1) quickSort(a, i + 1, right, brel);
 }
 
-void quickSort(unsigned int* a, int size) {
-	quickSort(a, 0, size - 1);
+template <class T>
+void quickSort(T* a, int size, BinaryRelation<T,T>& brel) {
+	quickSort(a, 0, size - 1, brel);
 }
 
 
