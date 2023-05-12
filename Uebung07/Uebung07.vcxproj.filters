@@ -24,6 +24,18 @@
     <ClInclude Include="InOrderIntRelation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+=======
+    <ClInclude Include="ReverseOrderIntRelation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorRelationBrightness.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorRelationColor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+>>>>>>> 36785836995875468be5c4698916f5b8be7a1793
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SortingAlgorithms.cpp">
@@ -35,5 +47,17 @@
     <ClCompile Include="InOrderIntRelation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="ReverseOrderIntRelation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorRelationColor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorRelationBrightness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+>>>>>>> 36785836995875468be5c4698916f5b8be7a1793
   </ItemGroup>
 </Project>
