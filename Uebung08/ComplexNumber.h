@@ -154,6 +154,18 @@ ComplexNumber operator/=(ComplexNumber& a, ComplexNumber& b) {
 	double h = 1.0 / (pow(b.get_real(), 2) + pow(b.get_img(), 2));
 	a.set_real(h * (a.get_real() * b.get_real() + a.get_img() * b.get_img()));
 	a.set_img(h * (a.get_img() * b.get_real() - original_a.get_real() * b.get_img()));
-
 	return a;
+}
+
+ostream& operator<<(ostream& os, ComplexNumber& a) {
+	os << "(" << a.get_real() << " + " << a.get_img() << "i)";
+	return os;
+}
+
+double operator~(ComplexNumber& a) {
+	return sqrt(pow(a.get_real(), 2) + pow(a.get_img(), 2));
+}
+
+double operator!(ComplexNumber& a) {
+	return sqrt(a.get_real() * a.get_real() + a.get_img() * a.get_img());
 }
