@@ -129,6 +129,12 @@
   <ItemGroup>
     <ClInclude Include="ComplexNumber.h" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+>>>>>>> 63f11ea7bf55e55a532f04ce6f938fd05a31e82f
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
