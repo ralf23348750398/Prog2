@@ -14,17 +14,4 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ComplexNumber.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-<<<<<<< HEAD
-=======
-  <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
->>>>>>> 63f11ea7bf55e55a532f04ce6f938fd05a31e82f
 </Project>
