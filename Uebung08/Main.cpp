@@ -2,6 +2,7 @@
 
 #include "ComplexNumber.h"
 #include "..\src\ViewPortGL.h"
+#include "..\Uebung07\Color.h"
 
 using namespace std;
 
@@ -39,20 +40,18 @@ void compute_abs_value(ComplexNumber& a) {
 
 
 unsigned int getMandelbrotIndex(ComplexNumber& x, double limes, int max) {
-	ComplexNumber l(0, 0);
-	ComplexNumber m(0, 0);
-	ComplexNumber n(0, 0);
-	ComplexNumber o(0, 0);
+	ComplexNumber last(0, 0);
+	ComplexNumber current(0, 0);
 
-	for (int j = 1; j < max; j++) {
-		l = n * n;
-		m = l + x;
-		n = o;
-		o = m;
-		if (!m > limes) {
+	for (int j = 0; j <= max; j++) {
+		if (!current > limes) {
 			return j;
 		}
+		current = last * last;
+		current += x;
+		last = current;
 	}
+
 	return max;
 }
 
@@ -66,22 +65,25 @@ void drawMandelbrotMenge(ViewPortGL& vp) {
 
 	for (int x = 0; x < width; x++) {
 		for (int y = 0; y < height; y++) {
-			ComplexNumber a(-2 + x / 100, 1 - y / 100);
-			n = getMandelbrotIndex(a, limes, max);
+			double compX = -2 + (3.0 / width * x);
+			double compY = 1 - (2.0 / height * y);
+			ComplexNumber pixel(compX, compY);
+			n = getMandelbrotIndex(pixel, limes, max);
+
 			if (n >= 255) {
 				vp.preparePix(x, y, 0, 0, 0);
 			}
 			else {
-				vp.preparePix(x, y, n, n, 0);
+				vp.preparePix(x, y, n, 0, n);
 			}
 		}
 	}
+
 	vp.sendPixels();
 	vp.swapBuffers();
+	
 	while (is_running) {
 		is_running = !vp.windowShouldClose();
-
-		
 		}
 }
 
@@ -100,6 +102,6 @@ int main() {
 	compute_prod(4, a);
 	compute_abs_value(a);
 
-	ViewPortGL vp("Mandelbrotindex", 300, 200);
+	ViewPortGL vp("Mandelbrotindex", 900, 600);
 	drawMandelbrotMenge(vp);
 }
